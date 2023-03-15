@@ -57,7 +57,7 @@ def get_includes_from_file(file: Path) -> List[Include]:
     - Include paths utilizing '../' are not resolved.
     """
     includes, inside_comment_block = [], False
-    with open(file, encoding="utf-8") as fin:
+    with open(file, encoding="latin1") as fin:
         for line in fin:
             line = line.rstrip()
             line_without_comments = ""
